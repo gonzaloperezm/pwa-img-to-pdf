@@ -1,30 +1,23 @@
-<script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
+  <div id="app" class="container mt-5">
+    <h1 class="text-center mb-4">Convert Images to PDF</h1>
+    <FileUploader />
   </div>
-  <HelloWorld msg="Vite + Vue" />
 </template>
 
+<script>
+import FileUploader from './components/FileUploader.vue';
+
+export default {
+  components: {
+    FileUploader
+  },
+};
+</script>
+
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+#app {
+  font-family: 'Quicksand', sans-serif;
 }
 </style>
